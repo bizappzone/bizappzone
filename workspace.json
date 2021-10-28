@@ -1,6 +1,10 @@
 {
   "version": 2,
   "projects": {
+    "design-system-ngx-castle-elements": "libs/design-system/ngx-castle-elements",
+    "design-system-ngx-castle-forms": "libs/design-system/ngx-castle-forms",
+    "design-system-ngx-castle-tables": "libs/design-system/ngx-castle-tables",
+    "design-system-ngx-castle-ui": "libs/design-system/ngx-castle-ui",
     "ngx-castle-design": "apps/ngx-castle-design",
     "ngx-castle-design-e2e": "apps/ngx-castle-design-e2e"
   }

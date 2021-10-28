@@ -14,7 +14,20 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@bizappzone/ngx-castle-elements": [
+        "libs/design-system/ngx-castle-elements/src/index.ts"
+      ],
+      "@bizappzone/ngx-castle-forms": [
+        "libs/design-system/ngx-castle-forms/src/index.ts"
+      ],
+      "@bizappzone/ngx-castle-tables": [
+        "libs/design-system/ngx-castle-tables/src/index.ts"
+      ],
+      "@bizappzone/ngx-castle-ui": [
+        "libs/design-system/ngx-castle-ui/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
