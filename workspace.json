@@ -1,4 +1,7 @@
 {
   "version": 2,
-  "projects": {}
+  "projects": {
+    "ngx-castle-design": "apps/ngx-castle-design",
+    "ngx-castle-design-e2e": "apps/ngx-castle-design-e2e"
+  }
 }
