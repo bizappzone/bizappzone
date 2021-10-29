@@ -1,0 +1,29 @@
+{
+  "root": "apps/ngx-castle-design-e2e",
+  "sourceRoot": "apps/ngx-castle-design-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/ngx-castle-design-e2e/cypress.json",
+        "devServerTarget": "ngx-castle-design:serve:development",
+        "tsConfig": "apps/ngx-castle-design-e2e/tsconfig.json"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "ngx-castle-design:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/ngx-castle-design-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["ngx-castle-design"]
+}

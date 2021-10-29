@@ -1,0 +1,42 @@
+{
+  "projectType": "library",
+  "root": "libs/design-system/ngx-castle-forms",
+  "sourceRoot": "libs/design-system/ngx-castle-forms/src",
+  "prefix": "baz",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:package",
+      "outputs": ["dist/libs/design-system/ngx-castle-forms"],
+      "options": {
+        "project": "libs/design-system/ngx-castle-forms/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/design-system/ngx-castle-forms/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/design-system/ngx-castle-forms/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/design-system/ngx-castle-forms"],
+      "options": {
+        "jestConfig": "libs/design-system/ngx-castle-forms/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/design-system/ngx-castle-forms/src/**/*.ts",
+          "libs/design-system/ngx-castle-forms/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["NG", "FE", "DS"]
+}

@@ -1,0 +1,94 @@
+{
+  "projectType": "application",
+  "root": "apps/ngx-castle-design",
+  "sourceRoot": "apps/ngx-castle-design/src",
+  "prefix": "baz",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/ngx-castle-design",
+        "index": "apps/ngx-castle-design/src/index.html",
+        "main": "apps/ngx-castle-design/src/main.ts",
+        "polyfills": "apps/ngx-castle-design/src/polyfills.ts",
+        "tsConfig": "apps/ngx-castle-design/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/ngx-castle-design/src/favicon.ico",
+          "apps/ngx-castle-design/src/assets"
+        ],
+        "styles": ["apps/ngx-castle-design/src/styles.scss"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/ngx-castle-design/src/environments/environment.ts",
+              "with": "apps/ngx-castle-design/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "ngx-castle-design:build:production"
+        },
+        "development": {
+          "browserTarget": "ngx-castle-design:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "ngx-castle-design:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/ngx-castle-design/src/**/*.ts",
+          "apps/ngx-castle-design/src/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/ngx-castle-design"],
+      "options": {
+        "jestConfig": "apps/ngx-castle-design/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": ["NG", "FE", "DS"]
+}
