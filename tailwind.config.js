@@ -3,6 +3,7 @@ const { guessProductionMode } = require('@ngneat/tailwind');
 process.env.TAILWIND_MODE = guessProductionMode() ? 'build' : 'watch';
 
 module.exports = {
+  presets: [require('./tailwind-plugins/castle-ui-tailwindcss/castle-ui-base')],
   prefix: '',
   mode: 'jit',
   purge: {
@@ -24,5 +25,6 @@ module.exports = {
     extend: {},
   },
   plugins: [],
-  // plugins: [require('./libs/tailwind-plugins/castle/src/index')],
+
+  plugins: [require('./tailwind-plugins/castle-ui-tailwindcss/src')],
 };

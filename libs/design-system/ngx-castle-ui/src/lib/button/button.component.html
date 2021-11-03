@@ -1,1 +1,16 @@
 <p>button works!</p>
+
+
+<button class="baz-button baz-primary">
+  <ng-content select="before"></ng-content> {{ label }}<ng-content select="after"></ng-content>
+</button>
+
+<button class="baz-button bg-gradient-to-r from-sky-400 to-blue-500">{{ label}}
+  <span class="bg-white p-1 rounded-full text-blue-600 text-xs ml-2">4</span>
+</button>
+<button class="bg-gradient-to-r from-blue-500"> <i class="fab fa-angular"></i>new button 1</button>
+<button class="bg-conic-to-l from-yellow-500 via-purple-500 to-blue-500">new button</button>
+
+<button type="button" class="bg-blue-600 text-white p-2 rounded  leading-none flex items-center">
+  Notifications <span class="bg-white p-1 rounded-full text-blue-600 text-xs ml-2">4</span>
+</button>

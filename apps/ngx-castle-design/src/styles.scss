@@ -1,6 +1,46 @@
-/* You can add global styles to this file, and also import other style files */
-
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 /* You can add global styles to this file, and also import other style files */
+
+// https://tailwind-colors.meidev.co/
+
+@layer base {
+  :root {
+    --button-color: #718096;
+    --theme-color: #d08052;
+    --primary-color: #2b6cb0;
+    --primary-4-color: #4299e1;
+    --primary-6-color: #2c5282;
+    --primary-dark-color: #bee3f8;
+    --primary-dark-4-color: #ebf8ff;
+    --primary-dark-6-color: #90cdf4;
+
+    --on-primary-color: #ebf8ff;
+    --on-primary-4-color: #ebebeb;
+    --on-primary-6-color: #ebebeb;
+    --on-primary-dark-color: #2b6cb0;
+    --on-primary-dark-4-color: #3182ce;
+    --on-primary-dark-6-color: #2c5282;
+
+    --secondary-color: rgb(207, 21, 21);
+    --accent-color: rgb(5, 136, 5);
+
+    // 'on-primary-5-color': 'var(--on-primary-color)',
+    // 'on-primary-4-color': 'var(--on-primary-4-color)',
+    // 'on-primary-6-color': 'var(--on-primary-6-color)',
+    // 'on-primary-dark-5-color': 'var(--on-primary-dark-color)',
+    // 'on-primary-dark-4-color': 'var(--on-primary-dark-4-color)',
+    // 'on-primary-dark-6-color': 'var(--on-primary-dark-6-color)',
+  }
+  h1 {
+    @apply text-2xl;
+  }
+  h2 {
+    @apply text-xl;
+  }
+}
+
+.test {
+  color: rgb(5, 136, 5);
+}

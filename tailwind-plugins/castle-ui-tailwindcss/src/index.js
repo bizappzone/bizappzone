@@ -9,7 +9,7 @@ module.exports = plugin.withOptions(() => {
   };
 });
 
-const plugin = require('tailwindcss/plugin');
+// const plugin = require('tailwindcss/plugin');
 
 // module.exports = plugin.withOptions((options) => {
 //   return function ({ addUtilities }) {
@@ -29,7 +29,12 @@ module.exports = function buttonComponentsPlugin({ addComponents }) {
       '@apply text-gray-400': {},
     },
     '.btn-primary': {
-      '@apply bg-primary-color hover:bg-green-900 text-white font-bold py-2 px-4 rounded':
+      '@apply bg-primary-5-color hover:bg-green-900 text-white font-bold py-2 px-4 rounded':
+        // '@apply [var(--button-color)] hover:bg-green-900 text-white font-bold py-2 px-4 rounded':
+        {},
+    },
+    '.baz-button': {
+      '@apply bg-primary-5-color hover:bg-accent-5-color text-secondary-5-color font-bold py-2 px-4 rounded':
         // '@apply [var(--button-color)] hover:bg-green-900 text-white font-bold py-2 px-4 rounded':
         {},
     },
