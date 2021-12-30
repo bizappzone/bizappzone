@@ -1,6 +1,7 @@
 {
   "version": 2,
   "projects": {
+    "design-system-icon-sgv": "libs/design-system/icon-sgv",
     "design-system-ngx-castle-elements": "libs/design-system/ngx-castle-elements",
     "design-system-ngx-castle-forms": "libs/design-system/ngx-castle-forms",
     "design-system-ngx-castle-tables": "libs/design-system/ngx-castle-tables",

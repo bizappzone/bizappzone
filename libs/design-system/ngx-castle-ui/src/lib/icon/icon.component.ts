@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { iconActions } from '@bizappzone/castle-icons';
 
 @Component({
   selector: 'baz-icon',
@@ -23,9 +24,14 @@ export class IconComponent implements OnInit {
     | 'warn'
     | 'disabled' = 'default';
 
+  @Input() iconAction?: string;
+  @Input() iconPath?: string;
+
   constructor() {}
 
   ngOnInit(): void {
+    this.iconAction = iconActions.EDIT;
+    this.iconPath = iconActions.EDIT2;
     console.log('DS-icon-component w title :');
   }
 }

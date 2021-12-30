@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@bizappzone/castle-icons": ["libs/design-system/icon-sgv/src/index.ts"],
       "@bizappzone/ngx-castle-elements": [
         "libs/design-system/ngx-castle-elements/src/index.ts"
       ],

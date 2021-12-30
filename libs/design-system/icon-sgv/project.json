@@ -1,0 +1,23 @@
+{
+  "root": "libs/design-system/icon-sgv",
+  "sourceRoot": "libs/design-system/icon-sgv/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/design-system/icon-sgv/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/design-system/icon-sgv"],
+      "options": {
+        "jestConfig": "libs/design-system/icon-sgv/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
